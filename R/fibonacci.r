@@ -22,11 +22,16 @@
 #'
 #'@export
 fibonacci <- function(N) {
-  if (((class(N) != "numeric") || (N < 0)) || ((N %% 1 != 0))) {
-    stop("wrong input")
-  }                            #only integers > -1 make sense
-  else {
-    L <- c(0, 1)               #the Fibonacci sequence needs two starting numbers
+  if ( !is.numeric(N) ) {
+    stop("'N' should be numeric")
+  } else if (N<0) {
+    stop("'N' should be a positive integer")
+  } else if ( N %% 1 != 0 ) {
+    stop("'N' should be an integer")
+  }
+
+  L <- c(0, 1)               #the Fibonacci sequence needs two starting numbers
+
   if (N > 1) {
     for (i in 3 : (N + 1)) {
       L <- append(L, L[i - 2] + L[i - 1]) #every new number is determined only
@@ -38,7 +43,6 @@ fibonacci <- function(N) {
     }
   }
   return(L)
-  }
 }
 
 
