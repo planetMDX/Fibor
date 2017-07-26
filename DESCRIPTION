@@ -4,7 +4,7 @@ Title: Generates Fibonacci numbers
 Version: 0.1.2
 Authors@R: person("Roland", "Ambs", email = "roland.ambs@gmail.com",
     role = c("aut", "cre"))
-Description: It generates a list of the Fibonacci numbers starting at 0, going up to
+Description: It generates a vector of the Fibonacci numbers starting at 0, going up to
     a variable ceiling.
 License: CC0
 Encoding: UTF-8
